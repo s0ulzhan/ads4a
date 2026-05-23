@@ -11,6 +11,9 @@ public class Main {
         System.out.println("SMALL GRAPH:");
         smallGraph.printGraph();
 
+        System.out.println("DIJKSTRA:");
+        smallGraph.dijkstra(0);
+
         System.out.println();
 
         experiment.runTraversals(smallGraph, 0, "Small Graph (10)");
@@ -31,11 +34,11 @@ public class Main {
 
         for (int i = 0; i < size - 1; i++) {
 
-            g.addEdge(i, i + 1);
+            g.addEdge(i, i + 1, 4);
 
             if (i + 2 < size) {
 
-                g.addEdge(i, i + 2);
+                g.addEdge(i, i + 2, 2);
             }
         }
 
